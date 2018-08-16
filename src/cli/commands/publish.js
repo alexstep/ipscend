@@ -40,9 +40,10 @@ module.exports = Command.extend({
         console.log(res)
         console.log()
         console.log()
+
         let hash = ''
         for(let k in res){
-          if (res[k].path==config.path) {
+          if (config.path.indexOf(res[k].path) !== -1) {
             hash = res[k].hash
           }
         }
